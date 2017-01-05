@@ -1,32 +1,36 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router';
+import React from 'react';
+import NavLink from '../NavLink/NavLink';
 
 import './AppFrame.css';
 
 
-export default class AppFrame extends Component {
-    render() {
-        return (
-            <div className='AppFrame'>
-                <header>
-                    <div className='header-left'>
-                        <div className='header-logo'>
-                            <Link to='/'>
-                                logo
-                            </Link>
-                        </div>
-                        <Link to='about'>
-                            About
-                        </Link>
-                        <Link to='portfolio'>
-                            portfolio
-                        </Link>
-                    </div>
-                    <div className='header-right'>
-                        resume will go here
-                    </div>
-                </header>
-            </div>
-        )
-    }
+export default function AppFrame() {
+    return (
+        <div className='AppFrame'>
+            <header>
+                <div className='header-left'>
+                    <TopBarItem to='/' styling='header-logo' onlyActiveOnIndex={true}>
+                        Home
+                    </TopBarItem>
+                    <TopBarItem to='portfolio' styling='top-row'>
+                        Portfolio
+                    </TopBarItem>
+                    <TopBarItem to='about' styling='top-row'>
+                        About
+                    </TopBarItem>
+                </div>
+                <div className='header-right top-row'>
+                    Resume
+                </div>
+            </header>
+        </div>
+    )
+}
+
+export function TopBarItem({to, styling, children, onlyActiveOnIndex}) {
+    return (
+        <NavLink to={to} className={`${styling} top-row`} onlyActiveOnIndex>
+            {children}
+        </NavLink>
+    )
 }
