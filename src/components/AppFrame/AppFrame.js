@@ -1,6 +1,7 @@
 import React from 'react';
 import NavLink from '../NavLink/NavLink';
 
+import resumeUrl from '../../static/resumeUrl';
 import './AppFrame.css';
 
 
@@ -19,7 +20,14 @@ export default function AppFrame() {
                         About
                     </TopBarItem>
                 </div>
-                <a href='https://drive.google.com/file/d/0B2OF3MLVPR03TmZhTUhEeVRNWjQ/view?usp=sharing' target='_blank' className='header-right top-row'>
+                <div className='header-left'>
+                    <select className='small-screen-options'>
+                        <option value='/'>Home</option>
+                        <option value='portfolio'>Portfolio</option>
+                        <option value='about'>About</option>
+                    </select>
+                </div>
+                <a href={resumeUrl} target='_blank' className='header-right top-row'>
                     Resume
                 </a>
             </header>

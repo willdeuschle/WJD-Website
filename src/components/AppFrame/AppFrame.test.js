@@ -2,6 +2,8 @@ import AppFrame, { TopBarItem } from './AppFrame';
 import React from 'react'
 import { shallow, mount } from 'enzyme';
 
+import resumeUrl from '../../static/resumeUrl';
+
 const shallowSetup = (props={}) => shallow(<AppFrame {...props} />)
 const mountSetup = (props={}) => mount(<AppFrame {...props} />)
 
@@ -31,6 +33,16 @@ describe('<AppFrame />', () => {
         const renderedAppFrame = mountSetup()
         expect(renderedAppFrame.find('NavLink').length).toBe(3)
     });
+
+    it('should render an <a/> element with the correct link', () => {
+        const renderedAppFrame = shallowSetup()
+        expect(renderedAppFrame.find('.header-right').node.props.href).toBe(resumeUrl)
+    });
+
+    it('should also have a dropdown for small screens', () => {
+        const renderedAppFrame = shallowSetup()
+        //TESTFLAG
+    })
 });
 
 

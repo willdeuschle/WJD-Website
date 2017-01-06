@@ -56,3 +56,12 @@ header {
     color: lightgrey;
     border-bottom: 1px solid yellow;
 }
+
+.small-screen-options {
+    display: none;
+}
+
+@media (max-width: 960px) {
+    .small-screen-options { display: inline-block; }
+    .header-left { display: none; }
+}

@@ -1,0 +1,29 @@
+.Banner {
+    /*cool one*/
+    background: #ff00cc; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #ff00cc , #333399); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #ff00cc , #333399); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+             
+    height: 500px;
+    padding: 20px;
+    padding-top: 150px;
+    text-align: center;
+}
+
+.dev-name {
+    font-size: 60px;
+    margin-top: 80px;
+    font-family: inherit;
+    color: skyblue;
+    opacity: 0;
+    -webkit-transition: all 1.5s ease-in-out 0s;
+         -moz-transition: all 1.5s ease-in-out 0s;
+          -ms-transition: all 1.5s ease-in-out 0s;
+           -o-transition: all 1.5s ease-in-out 0s;
+              transition: all 1.5s ease-in-out 0s;
+}
+
+.dev-name.fade-in {
+    opacity: 1;
+    margin-top: 0px;
+}
