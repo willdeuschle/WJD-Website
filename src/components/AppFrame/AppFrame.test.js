@@ -33,18 +33,21 @@ describe('<AppFrame />', () => {
     });
 });
 
-const shallowTopBarItemSetup = (props={}) => shallow(<TopBarItem {...props} />)
 
 describe('<TopBarItem />', () => {
     it('should render NavLinks with the appropriate attributes', () => {
-        const props = {to: 'foobar', styling: 'doop', children: 'baz'}
-        const renderedTopBarItem = shallowTopBarItemSetup(props)
+        const to = 'foo'
+        const styling = 'bar'
+        const children = 'baz'
+        const renderedTopBarItem = mount(<TopBarItem to={to} styling={styling}>{children}</TopBarItem>)
 
+        // should have the correct 'to' parameter
+        expect(renderedTopBarItem.instance().props.to).toBe(to)
         // should have the class name we supplied
-        expect(renderedTopBarItem.find('.doop').length).toBe(1)
+        expect(renderedTopBarItem.find(`.${styling}`).length).toBe(1)
         // along with the default className
         expect(renderedTopBarItem.find('.top-row').length).toBe(1)
         // should have the children
-        console.log("eh", renderedTopBarItem.find('.doop').text())
+        expect(renderedTopBarItem.find('.bar').text()).toBe(children)
     });
 });

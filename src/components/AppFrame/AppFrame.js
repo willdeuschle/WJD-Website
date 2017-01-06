@@ -19,9 +19,9 @@ export default function AppFrame() {
                         About
                     </TopBarItem>
                 </div>
-                <div className='header-right top-row'>
+                <a href='https://drive.google.com/file/d/0B2OF3MLVPR03TmZhTUhEeVRNWjQ/view?usp=sharing' target='_blank' className='header-right top-row'>
                     Resume
-                </div>
+                </a>
             </header>
         </div>
     )
