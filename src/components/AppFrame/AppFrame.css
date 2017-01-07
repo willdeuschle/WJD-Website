@@ -18,6 +18,17 @@ header {
     align-items: center;
 }
 
+.small-header-left {
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media (max-width: 960px) {
+    .small-header-left { display: flex; }
+    .header-left { display: none; }
+}
+
 .top-row {
     color: #9d9d9d;
     padding: 5px;
@@ -55,13 +66,4 @@ header {
 .top-row.active {
     color: lightgrey;
     border-bottom: 1px solid yellow;
-}
-
-.small-screen-options {
-    display: none;
-}
-
-@media (max-width: 960px) {
-    .small-screen-options { display: inline-block; }
-    .header-left { display: none; }
 }

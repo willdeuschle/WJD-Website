@@ -1,8 +1,16 @@
-import React from 'react';
-import NavLink from '../NavLink/NavLink';
+import React from 'react'
 
-import resumeUrl from '../../static/resumeUrl';
-import './AppFrame.css';
+import NavLink from '../NavLink/NavLink'
+import Hamburger from '../Hamburger/Hamburger.js'
+import resumeUrl from '../../static/resumeUrl'
+import './AppFrame.css'
+
+
+const LinkDict = {
+    Home: {to: '/', name: 'Home'},
+    Portfolio: {to: 'portfolio', name: 'Portfolio'},
+    About: {to: 'about', name: 'About'},
+}
 
 
 export default function AppFrame() {
@@ -10,22 +18,22 @@ export default function AppFrame() {
         <div className='AppFrame'>
             <header>
                 <div className='header-left'>
-                    <TopBarItem to='/' styling='header-logo' onlyActiveOnIndex={true}>
+                    <TopBarItem
+                        to={LinkDict.Home.to}
+                        styling='header-logo'
+                        onlyActiveOnIndex={true}
+                    >
                         Home
                     </TopBarItem>
-                    <TopBarItem to='portfolio' styling='top-row'>
+                    <TopBarItem to={LinkDict.Portfolio.to}>
                         Portfolio
                     </TopBarItem>
-                    <TopBarItem to='about' styling='top-row'>
+                    <TopBarItem to={LinkDict.About.to}>
                         About
                     </TopBarItem>
                 </div>
-                <div className='header-left'>
-                    <select className='small-screen-options'>
-                        <option value='/'>Home</option>
-                        <option value='portfolio'>Portfolio</option>
-                        <option value='about'>About</option>
-                    </select>
+                <div className='small-header-left'>
+                    <Hamburger options={Object.keys(LinkDict).map((item) => LinkDict[item])} />
                 </div>
                 <a href={resumeUrl} target='_blank' className='header-right top-row'>
                     Resume
@@ -35,7 +43,7 @@ export default function AppFrame() {
     )
 }
 
-export function TopBarItem({to, styling, children, onlyActiveOnIndex}) {
+export function TopBarItem({to, styling='', children, onlyActiveOnIndex}) {
     return (
         <NavLink to={to} className={`${styling} top-row`} onlyActiveOnIndex>
             {children}

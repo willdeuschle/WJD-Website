@@ -1,0 +1,74 @@
+.Hamburger-wrapper {
+    display: flex;
+}
+
+.Hamburger {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 30px;
+    margin-left: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.Hamburger.show {
+    transform: rotate(90deg);
+}
+
+.Hamburger:focus {
+    outline: none;
+}
+
+.Hamburger .filling {
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 0px;
+    right: 0px;
+    height: 2px;
+    background: white;
+}
+
+.Hamburger .filling::before,
+.Hamburger .filling::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    content: "";
+}
+
+.Hamburger .filling::before {
+    top: -10px;
+}
+
+.Hamburger .filling::after {
+    bottom: -10px;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background: white;
+    min-width: 100px;
+    left: 0px;
+    top: 70px;
+}
+
+.dropdown-content.show {
+    display: inline-block;
+}
+
+.dropdown-item {
+    display: block;
+}

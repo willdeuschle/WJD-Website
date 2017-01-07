@@ -1,7 +1,7 @@
-import AppFrame, { TopBarItem } from './AppFrame';
 import React from 'react'
 import { shallow, mount } from 'enzyme';
 
+import AppFrame, { TopBarItem } from './AppFrame';
 import resumeUrl from '../../static/resumeUrl';
 
 const shallowSetup = (props={}) => shallow(<AppFrame {...props} />)
@@ -29,9 +29,9 @@ describe('<AppFrame />', () => {
         expect(renderedAppFrame.find('.header-logo').length).toBe(1)
     });
 
-    it('should render NavLinks for each part of the site', () => {
+    it('should render NavLinks for each part of the site (via TopBarItem)', () => {
         const renderedAppFrame = mountSetup()
-        expect(renderedAppFrame.find('NavLink').length).toBe(3)
+        expect(renderedAppFrame.find('TopBarItem').length).toBe(3)
     });
 
     it('should render an <a/> element with the correct link', () => {
@@ -39,9 +39,9 @@ describe('<AppFrame />', () => {
         expect(renderedAppFrame.find('.header-right').node.props.href).toBe(resumeUrl)
     });
 
-    it('should also have a dropdown for small screens', () => {
+    it('should also have a hamburger icon for small screens', () => {
         const renderedAppFrame = shallowSetup()
-        //TESTFLAG
+        expect(renderedAppFrame.find('Hamburger').length).toBe(1)
     })
 });
 
