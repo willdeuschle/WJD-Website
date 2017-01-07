@@ -27,4 +27,10 @@ describe('<Banner />', () => {
         expect(renderedBanner.find('.fade-in').length).toBe(0)
         setTimeout(testing, 300)
     });
+
+    it('can render different icons', () => {
+    });
+
+    it('can cycle through the images using keys', () => {
+    });
 });
