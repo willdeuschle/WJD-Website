@@ -9,7 +9,7 @@ import './AppFrame.css'
 const LinkDict = {
     Home: {to: '/', name: 'Home'},
     Portfolio: {to: 'portfolio', name: 'Portfolio'},
-    About: {to: 'about', name: 'About'},
+    Timeline: {to: 'timeline', name: 'Timeline'},
 }
 
 
@@ -28,8 +28,8 @@ export default function AppFrame() {
                     <TopBarItem to={LinkDict.Portfolio.to}>
                         Portfolio
                     </TopBarItem>
-                    <TopBarItem to={LinkDict.About.to}>
-                        About
+                    <TopBarItem to={LinkDict.Timeline.to}>
+                        Timeline
                     </TopBarItem>
                 </div>
                 <div className='small-header-left'>

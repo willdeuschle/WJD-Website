@@ -17,20 +17,15 @@ describe('<Banner />', () => {
         expect(renderedBanner.find('.dev-name').length).toBe(1)
     });
 
-    it('should have a fade-in effect marked by an extra className', (done) => {
+    it('should have a fade-in effect marked by an extra classNames', (done) => {
         // for the timeout
         const testing = () => {
-            expect(renderedBanner.find('.fade-in').length).toBe(1)
+            expect(renderedBanner.find('.fade-in-first').length).toBe(1)
             done()
         }
         const renderedBanner = mountSetup()
-        expect(renderedBanner.find('.fade-in').length).toBe(0)
+        expect(renderedBanner.find('.fade-in-first').length).toBe(0)
         setTimeout(testing, 300)
-    });
-
-    it('can render different icons', () => {
-    });
-
-    it('can cycle through the images using keys', () => {
+        //TESTFLAG
     });
 });
