@@ -15,7 +15,7 @@ export const myEmail = 'wjdeuschle@gmail.com'
 export function renderExtra() {
     return (
         <div className='extra-footer'>
-            <img src={willlaugh4food} className='willLaugh4Food' />
+            <img src={willlaugh4food} alt='Will' className='willLaugh4Food' />
             <h2 className='made-by'>
                 <a className='fa fa-gavel'/> by Will Deuschle
             </h2>
