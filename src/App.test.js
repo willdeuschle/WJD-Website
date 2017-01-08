@@ -11,10 +11,11 @@ describe('<App />', () => {
       ReactDOM.render(<App />, div)
     });
 
-    it('renders the AppFrame, Banner', () => {
+    it('renders the AppFrame, Banner, Footer', () => {
         const renderedApp = shallow(<App />)
         expect(renderedApp.find('AppFrame').length).toBe(1)
         expect(renderedApp.find('Banner').length).toBe(1)
+        expect(renderedApp.find('Footer').length).toBe(1)
     });
 });
 

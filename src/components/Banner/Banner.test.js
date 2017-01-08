@@ -18,14 +18,22 @@ describe('<Banner />', () => {
     });
 
     it('should have a fade-in effect marked by an extra classNames', (done) => {
-        // for the timeout
-        const testing = () => {
+        // for the first timeout
+        const testingFirst = () => {
             expect(renderedBanner.find('.fade-in-first').length).toBe(1)
+        }
+
+        // for the last timeout
+        const testingLast = () => {
+            expect(renderedBanner.find('.fade-in-last').length).toBe(1)
             done()
         }
         const renderedBanner = mountSetup()
+
         expect(renderedBanner.find('.fade-in-first').length).toBe(0)
-        setTimeout(testing, 300)
-        //TESTFLAG
+        expect(renderedBanner.find('.fade-in-last').length).toBe(0)
+
+        setTimeout(testingFirst, 300)
+        setTimeout(testingLast, 500)
     });
 });

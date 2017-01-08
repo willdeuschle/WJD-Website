@@ -7,7 +7,7 @@ import reduxLogo from '../../static/redux-logo.svg'
 import willLogo from '../../static/me.png'
 
 
-const imageArr = [
+export const imageArr = [
     {logo: reactLogo, name: 'react'},
     {logo: reduxLogo, name: 'redux'},
     {logo: willLogo, name: 'me'},
