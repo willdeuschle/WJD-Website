@@ -20,7 +20,11 @@ export function renderExtra() {
                 <a className='fa fa-gavel'/> by Will Deuschle
             </h2>
             <div className='view-source'>
-                Look at the <a href='https://github.com/willdeuschle/wjd_website'>source</a>.
+                Look at the <a
+                    href='https://github.com/willdeuschle/wjd_website'
+                    target='_blank'
+                >
+                    source</a>.
             </div>
         </div>
     )
