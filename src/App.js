@@ -2,7 +2,12 @@ import React, { Component } from 'react'
 
 import AppFrame from './components/AppFrame/AppFrame.js'
 import Banner from './components/Banner/Banner.js'
-import Footer, { externalLinkArr, myEmail } from './components/Footer/Footer.js'
+import Footer,
+{
+    externalLinkArr,
+    myEmail,
+    renderExtra
+} from './components/Footer/Footer.js'
 import './App.css'
 
 class App extends Component {
@@ -12,7 +17,11 @@ class App extends Component {
                 <AppFrame />
                 <Banner />
                 {this.props.children}
-                <Footer externalLinkArr={externalLinkArr} email={myEmail} />
+                <Footer
+                    externalLinkArr={externalLinkArr}
+                    email={myEmail}
+                    renderExtra={renderExtra}
+                />
             </div>
         );
   }

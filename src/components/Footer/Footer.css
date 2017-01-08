@@ -3,15 +3,14 @@
     bottom: 0px;
     width: 100%;
     min-height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: lightgrey;
     border-top: 1px solid grey;
     margin-top: 10px;
+    text-align: center;
+    padding: 15px;
 }
 
-.fa {
+.link-item.fa {
     color: #242f67;
     text-decoration: none;
     font-size: 30px;
@@ -24,7 +23,38 @@
               transition: all 0.3s ease-in-out 0s;
 }
 
-.fa:hover {
+.link-item.fa:hover {
     color: #663366;
     font-size: 40px;
+}
+
+.external-links {
+    margin-top: 15px;
+}
+
+.extra-footer .willLaugh4Food {
+    border-radius: 50%;
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+.extra-footer .made-by {
+    margin-bottom: 5px;
+}
+
+.extra-footer .made-by, .view-source {
+    font-weight: 100;
+    color: #666;
+}
+
+.extra-footer .view-source a {
+    text-decoration: none;
+    color: #3366BB;
+}
+
+.extra-footer .fa-gavel {
+    transform: rotate(90deg);
+    color: goldenrod;
+    font-size: 32px;
 }

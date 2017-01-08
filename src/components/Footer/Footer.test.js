@@ -32,4 +32,8 @@ describe('<Footer />', () => {
         const renderedFooter = shallowSetup(requiredProps)
         expect(renderedFooter.find('.fa-envelope').length).toBe(1)
     });
+
+    it('should render extra if something is there', () => {
+        // TESTFLAG
+    });
 });
