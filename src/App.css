@@ -1,3 +1,12 @@
+html, body, #root, .App {
+    height: 100%;
+    margin: 0px;
+}
+
 #root {
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.wrap-children {
+    min-height: calc(100% - 300px);
 }

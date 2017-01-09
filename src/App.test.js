@@ -14,7 +14,6 @@ describe('<App />', () => {
     it('renders the AppFrame, Banner, Footer', () => {
         const renderedApp = shallow(<App />)
         expect(renderedApp.find('AppFrame').length).toBe(1)
-        expect(renderedApp.find('Banner').length).toBe(1)
         expect(renderedApp.find('Footer').length).toBe(1)
     });
 });
