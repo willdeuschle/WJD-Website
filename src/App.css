@@ -1,12 +1,8 @@
-html, body, #root, .App {
-    height: 100%;
-    margin: 0px;
-}
-
 #root {
     overflow-x: hidden;
 }
 
 .wrap-children {
-    min-height: calc(100% - 300px);
+    /*the 300px matches the height of the footer*/
+    min-height: calc(100vh - 300px);
 }
