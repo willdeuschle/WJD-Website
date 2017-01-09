@@ -3,6 +3,8 @@
 }
 
 .wrap-children {
+    /*the 70px matches the height of the header*/
+    padding-top: 70px;
     /*the 300px matches the height of the footer*/
     min-height: calc(100vh - 300px);
 }
