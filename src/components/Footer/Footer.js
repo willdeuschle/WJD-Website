@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import willlaugh4food from '../../static/willlaugh4food.png'
+import willlaugh4food from '../../static/images/willlaugh4food.png'
 import './Footer.css'
 
 // some constants related to the footer

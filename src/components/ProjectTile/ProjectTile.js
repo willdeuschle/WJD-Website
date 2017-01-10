@@ -5,17 +5,15 @@ import './ProjectTile.css'
 export default class ProjectTile extends Component {
     render() {
         return (
-            <div className='ProjectTile'>
-                <a href={this.props.link}>
-                    <div className='project-title'>
-                        {this.props.title || ''}
-                    </div>
-                    <img src={this.props.img} className='project-image' alt='project'/>
-                    <div className='project-desc'>
-                        {this.props.desc}
-                    </div>
-                </a>
-            </div>
+            <a href={this.props.link} target='_blank' className='ProjectTile'>
+                <div className='project-title'>
+                    {this.props.title || ''}
+                </div>
+                <div className='project-desc'>
+                    {this.props.desc}
+                </div>
+                <img src={this.props.img} className='project-image' alt='project'/>
+            </a>
         )
     }
 }

@@ -1,7 +1,66 @@
 .ProjectTile {
-    height: 100px;
-    width: 100px;
-    padding: 20px;
+    height: 400px;
+    width: 300px;
+    padding: 40px;
     margin: 20px;
-    background: red;
+    background: whitesmoke;
+    border: 1px solid #dbe2e8;;
+    border-radius: 4px;
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+    -webkit-transition: box-shadow 0.3s ease, border 0.3s ease, background 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ProjectTile:hover {
+    box-shadow: 1px 2px 4px 0px rgba(46,61,73,0.2);
+    background: wheat;
+}
+
+.project-title {
+    text-align: center;
+    font-size: 40px;
+    color: #666;
+    font-weight: 100;
+    max-width: 50%;
+}
+
+.ProjectTile:hover .project-title {
+    color: #242f67;
+}
+
+.project-title, .project-image, .project-desc {
+    -webkit-transition: all 0.3s ease-in-out 0s;
+         -moz-transition: all 0.3s ease-in-out 0s;
+          -ms-transition: all 0.3s ease-in-out 0s;
+           -o-transition: all 0.3s ease-in-out 0s;
+              transition: all 0.3s ease-in-out 0s;
+}
+
+.project-image {
+    height: 225px;
+    width: 300px;
+    border: 1px solid #dbe2e8;
+}
+
+.project-desc {
+    opacity: 0;
+    position: absolute;
+    max-width: 200px;
+    text-align: center;
+    font-size: 24px;
+    color: #666;
+    font-weight: 100;
+}
+
+.ProjectTile:hover .project-image {
+    opacity: 0;
+}
+
+.ProjectTile:hover .project-desc {
+    opacity: 1;
 }

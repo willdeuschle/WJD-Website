@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import classNames from 'classnames'
 
 import './ImageCycle.css'
-import reactLogo from '../../static/react-logo.svg'
-import reduxLogo from '../../static/redux-logo.svg'
-import willLogo from '../../static/me.png'
+import reactLogo from '../../static/images/react-logo.svg'
+import reduxLogo from '../../static/images/redux-logo.svg'
+import willLogo from '../../static/images/me.png'
 
 
 export const imageArr = [
