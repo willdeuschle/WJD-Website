@@ -6,6 +6,9 @@ import { projectLinks, projectImageLinks } from '../../static/projects'
 
 
 export default class Portfolio extends Component {
+    renderProjectTiles() {
+    }
+
     render() {
         return (
             <div className='Portfolio'>
@@ -16,12 +19,15 @@ export default class Portfolio extends Component {
                     desc={'Elm application to summarize Medium articles.'}
                 />
                 <ProjectTile
-                    link={''}
-                    img={''}
-                    title={''}
-                    desc={''}
+                    link={projectLinks.blogio}
+                    img={projectImageLinks.blogio}
+                    title={'BlogIO'}
+                    desc={'IOS application to listen to Medium articles as podcasts.'}
                 />
             </div>
         )
     }
+}
+
+Portfolio.propTypes = {
 }
