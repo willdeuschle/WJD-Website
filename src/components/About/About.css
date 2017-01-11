@@ -1,0 +1,26 @@
+.About {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.About .snapshot-title {
+    font-size: 46px;
+    font-weight: 100;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.About .title-divider {
+    border: 1px solid #242f67;
+    width: 10%;
+}
+
+.About .will-about-image {
+    margin-top: 40px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    /*add some sort of border to it!*/
+}

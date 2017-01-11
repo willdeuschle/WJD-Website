@@ -1,14 +1,20 @@
 import medium_simplifier_image from './images/medium_simplifier_image.png'
 import blogio_image from './images/blogio_image.jpg'
 
-export const projectLinks = {
-    medium_simplifier: 'https://willdeuschle.github.io/twig/dist/index.html',
-    blogio: 'https://willdeuschle.github.io/twig/dist/index.html',
+const projectData = {
+    medium_simplifier_image: {
+        link: 'https://willdeuschle.github.io/twig/dist/index.html',
+        image: medium_simplifier_image,
+        title: 'Medium Simplifier',
+        desc: 'Elm application to summarize Medium articles.',
+    },
+
+    blogio: {
+        link: 'https://itunes.apple.com/us/app/blogio/id1193012119?mt=8',
+        image: blogio_image,
+        title: 'BlogIO',
+        desc: 'IOS application to listen to Medium articles as podcasts.',
+    },
 }
 
-export const projectImageLinks = {
-    medium_simplifier: medium_simplifier_image,
-    blogio: blogio_image,
-}
-
-export const projects_arr = ['medium_simplifier', 'blogio']
+export default projectData

@@ -16,4 +16,9 @@ describe('<Home />', () => {
         const renderedHome = shallowSetup()
         expect(renderedHome.find('Banner').length).toBe(1)
     });
+
+    it('should render an About section', () => {
+        const renderedHome = shallowSetup()
+        expect(renderedHome.find('About').length).toBe(1)
+    });
 });
