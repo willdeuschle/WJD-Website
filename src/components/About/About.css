@@ -18,9 +18,41 @@
 }
 
 .About .will-about-image {
-    margin-top: 40px;
+    margin-top: 20px;
     height: 200px;
     width: 200px;
     border-radius: 50%;
     /*add some sort of border to it!*/
+}
+
+.About .will-title {
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: 200;
+}
+
+.About .role-desc {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 200;
+    color: #666;
+}
+
+.About .role-divider {
+    border: 1px solid #666;
+    width: 10%;
+}
+
+.About .desc-para {
+    width: 50%;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.About .quorum-link {
+    text-decoration: none;
+    color: #303e60;
+    font-weight: 800;
 }
