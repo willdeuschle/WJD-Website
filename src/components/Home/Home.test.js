@@ -21,4 +21,9 @@ describe('<Home />', () => {
         const renderedHome = shallowSetup()
         expect(renderedHome.find('About').length).toBe(1)
     });
+
+    it('should render a TechStack section', () => {
+        const renderedHome = shallowSetup()
+        expect(renderedHome.find('TechStack').length).toBe(1)
+    });
 });
