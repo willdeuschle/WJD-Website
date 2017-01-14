@@ -1,10 +1,14 @@
 import reactLogo from './images/react-logo.svg'
 import reduxLogo from './images/redux-logo.svg'
+import elmLogo from './images/elm-logo.png'
 
 const technologies = {
     python: {name: 'Python', img: null},
     javascript: {name: 'Javascript', img: null},
-    elm: {name: 'Elm', img: null},
+    elm: {name: 'Elm', img: elmLogo, desc: 'Purely functional language for ' +
+        'webapps. I have experience building projects in Elm and am very ' +
+        'interested in the opportunity it affords for stable and ' +
+        'efficient web development.'},
     react: {name: 'React', img: reactLogo, desc: 'Preferred frontend ' +
         'framework, used extensively at work and in most of my user-facing ' +
         'projects (including this one). Very comfortable integrating with ' +

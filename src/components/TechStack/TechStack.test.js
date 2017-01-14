@@ -24,4 +24,12 @@ describe('<TechStack />', () => {
     it('should only render a single block if we are currently viewing something', () => {
         //TESTFLAG
     });
+
+    it('should switch between the single block and multiple blocks on click', () => {
+        //TESTFLAG
+    });
+
+    it('should render a title, description, image, and back button in the single block', () => {
+        //TESTFLAG
+    });
 });

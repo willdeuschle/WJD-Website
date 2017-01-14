@@ -46,6 +46,7 @@ export default class TechStack extends Component {
                 className='Block single'
                 onClick={this.transitionOut}
             >
+                <i className='fa fa-caret-left' />
                 <div className='block-title'>
                 {
                     this.props.blocks[this.state.currentlyViewing].name
