@@ -1,10 +1,13 @@
 import reactLogo from './images/react-logo.svg'
 import reduxLogo from './images/redux-logo.svg'
 import elmLogo from './images/elm-logo.png'
+import jsLogo from './images/js-logo.png'
 
 const technologies = {
     python: {name: 'Python', img: null},
-    javascript: {name: 'Javascript', img: null},
+    javascript: {name: 'JavaScript', img: jsLogo, desc: 'My bread and ' +
+        'butter. I mostly develop using some variant of JS, both at work ' +
+        'and in my side projects. ES6 preferred.'},
     elm: {name: 'Elm', img: elmLogo, desc: 'Purely functional language for ' +
         'webapps. I have experience building projects in Elm and am very ' +
         'interested in the opportunity it affords for stable and ' +
@@ -12,7 +15,7 @@ const technologies = {
     react: {name: 'React', img: reactLogo, desc: 'Preferred frontend ' +
         'framework, used extensively at work and in most of my user-facing ' +
         'projects (including this one). Very comfortable integrating with ' +
-        'Redux and other tools.'},
+        'Redux, Jest, and other tools.'},
     react_native: {name: 'React Native', img: reactLogo, desc: 'Most of my ' +
         'mobile development is done with React Native, porting over ' +
         'functionality from C++ or Swift when necessary. Excellent for ' +
