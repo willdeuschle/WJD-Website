@@ -28,18 +28,23 @@
 }
 
 .Block {
+    position: relative;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 50px;
     font-size: 20px;
-    font-weight: 100;
+    font-weight: 400;
     border: 1px solid #303e60;
     margin: 10px;
     color: #303e60;
-    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
-    -webkit-transition: box-shadow 0.3s ease, border 0.3s ease, background 0.3s ease;
+    /*box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);*/
+    box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.34);
+    -webkit-transition: box-shadow 0.3s ease, border 0.3s ease, 
+        background 0.3s ease, height 0.3s ease, width 0.3s ease, 
+        font-size 0.3s ease, color 0.3s ease;
     cursor: pointer;
     border-radius: 4px;
 }
@@ -47,6 +52,30 @@
 .Block:hover {
     box-shadow: 1px 2px 4px 0px rgba(46,61,73,0.2);
     color: black;
+}
+
+.Block.single {
+    height: 300px;
+    width: 300px;
+}
+
+.Block .block-title {
+    font-size: 24px;
+    color: #303e60;
+}
+
+.Block .block-img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.Block .block-desc {
+    margin: 20px;
+    font-size: 16px;
+    color: #303e60;
 }
 
 .blocks-enter {
@@ -57,7 +86,7 @@
 .blocks-enter.blocks-enter-active {
     width: 100%;
     opacity: 1;
-    transition: width 0.3s ease-in, opacity 0.3s ease-in;
+    transition: width 0.3s ease-in, opacity 0.3s ease-in, font-size 0.3 ease-in;
 }
 
 .blocks-leave {

@@ -28,14 +28,14 @@ export default class TechStack extends Component {
 
     renderBlocks() {
         if (!this.state.currentlyViewing) {
-            return this.props.blocks.map((block) => {
+            return Object.keys(this.props.blocks).map((block_name) => {
                 return (
                     <div
-                        key={block}
+                        key={block_name}
                         className='Block'
-                        onClick={() => this.transitionIn(block)}
+                        onClick={() => this.transitionIn(block_name)}
                     >
-                        {block}
+                        {this.props.blocks[block_name].name}
                     </div>
                 )
             })
@@ -43,10 +43,22 @@ export default class TechStack extends Component {
         return (
             <div
                 key={this.state.currentlyViewing}
-                className='Block'
+                className='Block single'
                 onClick={this.transitionOut}
             >
-                {this.state.currentlyViewing}
+                <div className='block-title'>
+                {
+                    this.props.blocks[this.state.currentlyViewing].name
+                }
+                </div>
+                <img
+                    className='block-img'
+                    src={this.props.blocks[this.state.currentlyViewing].img}
+                    alt='block'
+                />
+                <div className='block-desc'>
+                    {this.props.blocks[this.state.currentlyViewing].desc}
+                </div>
             </div>
         )
     }
@@ -72,7 +84,7 @@ export default class TechStack extends Component {
 }
 
 TechStack.propTypes = {
-    blocks: React.PropTypes.array.isRequired,
+    blocks: React.PropTypes.object.isRequired,
 }
 
 
