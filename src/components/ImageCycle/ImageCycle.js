@@ -3,13 +3,11 @@ import classNames from 'classnames'
 
 import './ImageCycle.css'
 import reactLogo from '../../static/images/react-logo.svg'
-import reduxLogo from '../../static/images/redux-logo.svg'
 import willLogo from '../../static/images/me.png'
 
 
 export const imageArr = [
     {logo: reactLogo, name: 'react'},
-    {logo: reduxLogo, name: 'redux'},
     {logo: willLogo, name: 'me'},
 ]
 
