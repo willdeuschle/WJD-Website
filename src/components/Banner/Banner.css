@@ -11,7 +11,9 @@
     text-align: center;
 }
 
-.dev-name, .dev-desc {
+.dev-name, 
+.dev-desc,
+.dev-contact {
     font-family: inherit;
     color: skyblue;
     opacity: 0;
@@ -31,9 +33,22 @@
 .dev-desc {
     margin-top: 80px;
     font-size: 30px;
+    margin-bottom: 20px;
 }
 
-.dev-name.fade-in-first, .dev-desc.fade-in-last {
+.dev-contact {
+    padding: 10px;
+    width: 150px;
+    margin: 80px auto 0px auto;
+    font-weight: 100;
+    font-size: 20px;
+    border: 1px solid skyblue;
+    cursor: pointer;
+}
+
+.dev-name.fade-in-first, 
+.dev-desc.fade-in-second,
+.dev-contact.fade-in-last {
     opacity: 1;
     margin-top: 0px;
 }

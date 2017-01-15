@@ -23,17 +23,39 @@ describe('<Banner />', () => {
             expect(renderedBanner.find('.fade-in-first').length).toBe(1)
         }
 
+        // for the second timeout
+        const testingSecond = () => {
+            expect(renderedBanner.find('.fade-in-second').length).toBe(1)
+            done()
+        }
+
         // for the last timeout
         const testingLast = () => {
             expect(renderedBanner.find('.fade-in-last').length).toBe(1)
             done()
         }
+
         const renderedBanner = mountSetup()
 
         expect(renderedBanner.find('.fade-in-first').length).toBe(0)
-        expect(renderedBanner.find('.fade-in-last').length).toBe(0)
+        expect(renderedBanner.find('.fade-in-second').length).toBe(0)
 
         setTimeout(testingFirst, 300)
-        setTimeout(testingLast, 500)
+        setTimeout(testingSecond, 500)
+        setTimeout(testingLast, 700)
+    });
+
+    it('should render the contact overlay on click using toggleContactOverlay', () => {
+        const renderedBanner = shallowSetup()
+        // no contact overlay
+        expect(renderedBanner.find('.contact-overlay').length).toBe(0)
+        // click button for contact overlay
+        renderedBanner.find('.dev-contact').simulate('click')
+        // now there is a contact overlay
+        expect(renderedBanner.find('Overlay').length).toBe(1)
+    });
+
+    it('should remove overlay on click of escape key or x-button', () => {
+        //TESTFLAG
     });
 });
