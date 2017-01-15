@@ -14,9 +14,9 @@ export default class TechStack extends Component {
         this.transitionOut = this.transitionOut.bind(this)
     }
 
-    transitionIn(block) {
+    transitionIn(blockName) {
         this.setState({
-            currentlyViewing: block,
+            currentlyViewing: blockName,
         })
     }
 
@@ -40,6 +40,7 @@ export default class TechStack extends Component {
                 )
             })
         }
+
         return (
             <div
                 key={this.state.currentlyViewing}
@@ -86,15 +87,4 @@ export default class TechStack extends Component {
 
 TechStack.propTypes = {
     blocks: React.PropTypes.object.isRequired,
-}
-
-
-class Block extends Component {
-    render() {
-        return (
-            <div className='Block'>
-                {this.props.block}
-            </div>
-        )
-    }
 }
