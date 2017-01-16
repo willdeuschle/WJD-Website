@@ -28,8 +28,8 @@ const projectData = {
     fop_web_app: {
         link: 'http://foptrips.fas.harvard.edu/',
         image: fop_web_app_image,
-        title: 'FOP Web App',
-        desc: 'My first ever web app, this serves leaders of Harvard\'s ' +
+        title: 'Harvard FOP Web App',
+        desc: 'My first ever bare-bones web app, this serves leaders of Harvard\'s ' +
             'First-Year Outdoor Program (FOP).'
     },
 }

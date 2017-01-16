@@ -1,10 +1,11 @@
 .ProjectTile {
+    position: relative;
     height: 400px;
     width: 300px;
     padding: 40px;
     margin: 40px 20px 20px 20px;
     background: whitesmoke;
-    border: 1px solid #dbe2e8;;
+    border: 1px solid #dbe2e8;
     border-radius: 4px;
     box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
     -webkit-transition: box-shadow 0.3s ease, border 0.3s ease, background 0.3s ease;
@@ -30,6 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 30%;
 }
 
 .ProjectTile:hover .project-title {
@@ -48,18 +50,20 @@
     height: 200px;
     width: 200px;
     border-radius: 6px;
-    border: 1px solid #dbe2e8;
+    position: absolute;
+    bottom: 60px;
 }
 
 .project-desc {
     opacity: 0;
-    position: absolute;
-    margin-top: 20px;
-    max-width: 200px;
     text-align: center;
     font-size: 24px;
     color: #666;
     font-weight: 100;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .ProjectTile:hover .project-image {
