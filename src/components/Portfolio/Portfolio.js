@@ -23,7 +23,13 @@ export default class Portfolio extends Component {
     render() {
         return (
             <div className='Portfolio'>
-                {this.renderProjectTiles()}
+                <div className='portfolio-title'>
+                    Portfolio
+                </div>
+                <hr className='portfolio-divider' />
+                <div className='portfolio-items'>
+                    {this.renderProjectTiles()}
+                </div>
             </div>
         )
     }

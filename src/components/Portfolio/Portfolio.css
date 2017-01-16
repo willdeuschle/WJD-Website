@@ -1,8 +1,24 @@
 .Portfolio {
+    padding: 2% 10%;
+}
+
+.Portfolio .portfolio-title {
+    display: flex;
+    justify-content: center;
+    font-size: 46px;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.Portfolio .portfolio-divider {
+    border: 1px solid #242f67;
+    width: 10%;
+}
+
+.Portfolio .portfolio-items {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding: 2% 10%;
 }

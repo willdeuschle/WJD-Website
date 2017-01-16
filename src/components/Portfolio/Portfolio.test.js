@@ -7,9 +7,11 @@ import projectData from '../../static/projects'
 const shallowMount = props => shallow(<Portfolio {...props} />)
 
 describe('<Portfolio />', () => {
-    it('should render itself', () => {
+    it('should render itself, a title, and a divider', () => {
         const renderedPortfolio = shallowMount()
         expect(renderedPortfolio.find('.Portfolio').length).toBe(1)
+        expect(renderedPortfolio.find('.portfolio-title').length).toBe(1)
+        expect(renderedPortfolio.find('.portfolio-divider').length).toBe(1)
     });
 
     it('should have a method to render the tiles', () => {
