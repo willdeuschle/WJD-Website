@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow, mount } from 'enzyme';
 
-import AppFrame, { TopBarItem } from './AppFrame';
+import AppFrame, { TopBarItem, LinkDict } from './AppFrame';
 import resumeUrl from '../../static/resumeUrl';
 
 const shallowSetup = (props={}) => shallow(<AppFrame {...props} />)
@@ -31,12 +31,14 @@ describe('<AppFrame />', () => {
 
     it('should render NavLinks for each part of the site (via TopBarItem)', () => {
         const renderedAppFrame = mountSetup()
-        expect(renderedAppFrame.find('TopBarItem').length).toBe(3)
+        expect(renderedAppFrame.find('TopBarItem').length)
+            .toBe(Object.keys(LinkDict).length)
     });
 
     it('should render an <a/> element with the correct link', () => {
         const renderedAppFrame = shallowSetup()
-        expect(renderedAppFrame.find('.header-right').node.props.href).toBe(resumeUrl)
+        expect(renderedAppFrame.find('.header-right').node.props.href)
+            .toBe(resumeUrl)
     });
 
     it('should also have a hamburger icon for small screens', () => {

@@ -6,7 +6,7 @@ import resumeUrl from '../../static/resumeUrl'
 import './AppFrame.css'
 
 
-const LinkDict = {
+export const LinkDict = {
     Home: {to: '/', name: 'Home'},
     Portfolio: {to: 'portfolio', name: 'Portfolio'},
 }
