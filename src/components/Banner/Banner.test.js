@@ -45,17 +45,9 @@ describe('<Banner />', () => {
         setTimeout(testingLast, 700)
     });
 
-    it('should render the contact overlay on click using toggleContactOverlay', () => {
+    it('should render the Get In Touch button', () => {
         const renderedBanner = shallowSetup()
-        // no contact overlay
-        expect(renderedBanner.find('.contact-overlay').length).toBe(0)
-        // click button for contact overlay
-        renderedBanner.find('.dev-contact').simulate('click')
-        // now there is a contact overlay
-        expect(renderedBanner.find('Overlay').length).toBe(1)
-    });
-
-    it('should remove overlay on click of escape key or x-button', () => {
-        //TESTFLAG
+        // the button
+        expect(renderedBanner.find('.dev-contact').length).toBe(1)
     });
 });

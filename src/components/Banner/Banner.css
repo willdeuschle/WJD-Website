@@ -37,12 +37,14 @@
 }
 
 .dev-contact {
+    display: inline-block;
     padding: 10px;
     width: 150px;
     margin: 80px auto 0px auto;
     font-weight: 100;
     font-size: 20px;
     border: 1px solid skyblue;
+    text-decoration: none;
     cursor: pointer;
 }
 
