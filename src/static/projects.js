@@ -1,6 +1,7 @@
 import medium_simplifier_image from './images/medium_simplifier_image.png'
 import blogio_image from './images/blogio_image.jpg'
 import react_native_image from './images/react_native_image.png'
+import fop_web_app_image from './images/fop_web_app_image.png'
 
 const projectData = {
     medium_simplifier_image: {
@@ -22,6 +23,14 @@ const projectData = {
         image: react_native_image,
         title: 'React Native Starter',
         desc: 'Get React Native apps running quickly from this starter template.',
+    },
+
+    fop_web_app: {
+        link: 'http://foptrips.fas.harvard.edu/',
+        image: fop_web_app_image,
+        title: 'FOP Web App',
+        desc: 'My first ever web app, this serves leaders of Harvard\'s ' +
+            'First-Year Outdoor Program (FOP).'
     },
 }
 
