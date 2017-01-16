@@ -4,18 +4,18 @@ import react_native_image from './images/react_native_image.png'
 import fop_web_app_image from './images/fop_web_app_image.png'
 
 const projectData = {
-    medium_simplifier_image: {
-        link: 'https://willdeuschle.github.io/twig/dist/index.html',
-        image: medium_simplifier_image,
-        title: 'Medium Simplifier',
-        desc: 'Elm application to summarize Medium articles.',
-    },
-
     blogio: {
         link: 'https://itunes.apple.com/us/app/blogio/id1193012119?mt=8',
         image: blogio_image,
         title: 'BlogIO',
         desc: 'IOS application to listen to Medium articles as podcasts.',
+    },
+
+    medium_simplifier_image: {
+        link: 'https://willdeuschle.github.io/twig/dist/index.html',
+        image: medium_simplifier_image,
+        title: 'Medium Simplifier',
+        desc: 'Elm application to summarize Medium articles.',
     },
 
     react_native_template: {
