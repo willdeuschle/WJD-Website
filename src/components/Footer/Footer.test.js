@@ -34,6 +34,12 @@ describe('<Footer />', () => {
     });
 
     it('should render extra if something is there', () => {
-        // TESTFLAG
+        const renderedSimpleFooter = shallowSetup(requiredProps)
+        const renderExtra = () => <div className='extra' />
+        const renderedFooterWithMore = shallowSetup(
+            Object.assign({}, requiredProps, {renderExtra})
+        )
+        expect(renderedSimpleFooter.find('.extra').length).toBe(0)
+        expect(renderedFooterWithMore.find('.extra').length).toBe(1)
     });
 });

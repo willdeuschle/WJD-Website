@@ -74,5 +74,5 @@ Footer.propTypes = {
 }
 
 Footer.defaultProps = {
-    renderExtra: () => null
+    renderExtra: () => null,
 }
