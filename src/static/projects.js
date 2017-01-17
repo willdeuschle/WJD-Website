@@ -8,7 +8,7 @@ const projectData = {
         link: 'https://itunes.apple.com/us/app/blogio/id1193012119?mt=8',
         image: blogio_image,
         title: 'BlogIO',
-        desc: 'IOS application to listen to Medium articles as podcasts.',
+        desc: 'iOS application to listen to Medium articles as podcasts.',
     },
 
     medium_simplifier_image: {
