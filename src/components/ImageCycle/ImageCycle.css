@@ -84,6 +84,15 @@
                                                       IE 10+, Safari 5 */ 
 }
 
+/*this is very unfortunate but necessary for dealing with safari*/
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) 
+{ @media {
+    .planet { 
+        margin-top: 85px;
+        margin-left: -95px;
+    }
+}}
+
 @-webkit-keyframes myOrbit {
     from { -webkit-transform: rotate(0deg) translateX(90px) rotate(0deg); }
     to   { -webkit-transform: rotate(360deg) translateX(90px) rotate(-360deg); }
