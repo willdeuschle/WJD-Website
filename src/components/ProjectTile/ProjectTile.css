@@ -66,6 +66,36 @@
     align-items: flex-start;
 }
 
+/*shrink images on mobile*/
+@media screen and (max-width: 480px) {
+  .project-image {
+        height: 150px;
+        width: 150px;
+  }
+  .project-desc {
+      height: 40%;
+      font-size: 20px;
+  }
+}
+
+/*this is very unfortunate but necessary for dealing with safari*/
+@media screen and (min-color-index:0) and (-webkit-min-device-pixel-ratio:0) 
+{ 
+    /*for normal size safari images*/
+    @media {
+        .project-image { 
+            left: 0px;
+            margin-left: calc((100% - 200px) / 2);
+        }
+    }
+    /*for small size safari images*/
+    @media screen and (max-width: 480px) {
+      .project-image {
+            margin-left: calc((100% - 150px) / 2);
+      }
+    }
+}
+
 .ProjectTile:hover .project-image {
     opacity: 0;
 }
