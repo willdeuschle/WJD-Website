@@ -6,6 +6,7 @@ import pythonLogo from './images/python-logo.jpg'
 import djangoLogo from './images/django-logo.png'
 import jestLogo from './images/jest-logo.png'
 import tastypieLogo from './images/tastypie-logo.png'
+import graphqlLogo from './images/graphqlLogo.png'
 
 const technologies = {
     python: {name: 'Python', img: pythonLogo, desc: 'Language used at work ' +
@@ -33,8 +34,12 @@ const technologies = {
         'management library, particulary when used in conjunction with ' +
         'React. Extensive experience using this in a production ' +
         'environment along with Immutable and Reselect.'},
-    jest: {name: 'Jest', img: jestLogo, desc: 'I believe very strongly in the ' +
-        'benefits of TDD, and jest is my preferred tool for testing ' +
+    graphql: {name: 'GraphQL', img: graphqlLogo, desc: 'An alternative to ' +
+        'REST, GraphQL is a query language I am very fond of. I have found ' +
+        'it to be a useful and powerful tool for maintaining ' +
+        'consistency of data access between different platforms.'},
+    jest: {name: 'Jest', img: jestLogo, desc: 'I believe very strongly in ' +
+        'the benefits of TDD, and jest is my preferred tool for testing ' +
         'frontend code.'},
     tastypie: {name: 'Tastypie', img: tastypieLogo, desc: 'Thorough ' +
         'experience building and using REST APIs in a production ' +

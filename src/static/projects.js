@@ -2,8 +2,17 @@ import medium_simplifier_image from './images/medium_simplifier_image.png'
 import blogio_image from './images/blogio_image.jpg'
 import react_native_image from './images/react_native_image.png'
 import fop_web_app_image from './images/fop_web_app_image.png'
+import purplistsources_image from './images/purplistsources_image.png'
 
 const projectData = {
+    purplistsources: {
+        link: 'http://www.purplistsources.com/',
+        image: purplistsources_image,
+        title: 'Purplist Sources',
+        desc: 'Production web app and Chrome extension for saving, ' +
+            'sharing, and discovering curated lists of articles.',
+    },
+
     blogio: {
         link: 'https://itunes.apple.com/us/app/blogio/id1193012119?mt=8',
         image: blogio_image,
