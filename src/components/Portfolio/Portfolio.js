@@ -15,6 +15,7 @@ export default class Portfolio extends Component {
                     img={projectData[item].image}
                     title={projectData[item].title}
                     desc={projectData[item].desc}
+                    isOpenSource={projectData[item].isOpenSource}
                 />
             )
         })

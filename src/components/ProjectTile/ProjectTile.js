@@ -3,9 +3,21 @@ import React, { Component } from 'react'
 import './ProjectTile.css'
 
 export default class ProjectTile extends Component {
+    isOpenSource() {
+        if (this.props.isOpenSource) {
+            return (
+                <div className='open-source'>
+                    Open Source Project
+                </div>
+            )
+        }
+        return null
+    }
+
     render() {
         return (
             <a href={this.props.link} target='_blank' className='ProjectTile'>
+                {this.isOpenSource()}
                 <div className='project-title'>
                     {this.props.title || ''}
                 </div>
