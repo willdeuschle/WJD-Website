@@ -86,12 +86,21 @@
 
 /*this is very unfortunate but necessary for dealing with safari*/
 @media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0) 
-{ @media {
+{ 
+  @media {
     .planet { 
         margin-top: 85px;
         margin-left: -95px;
     }
-}}
+  }
+}
+
+/*this is also unfortunate and deals with mobile*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .planet {
+      display: none;
+  }
+}
 
 @-webkit-keyframes myOrbit {
     from { -webkit-transform: rotate(0deg) translateX(90px) rotate(0deg); }
