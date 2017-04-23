@@ -1,5 +1,6 @@
 .ProjectTile {
     position: relative;
+    overflow: hidden;
     height: 400px;
     width: 310px;
     padding: 40px;
