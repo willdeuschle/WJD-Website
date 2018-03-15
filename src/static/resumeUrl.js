@@ -1,2 +1,2 @@
-const resumeUrl = 'https://drive.google.com/file/d/0B2OF3MLVPR03eGo2bmxpdldRMm8/view?usp=sharing'
+const resumeUrl = 'https://drive.google.com/open?id=0B2OF3MLVPR03czItbGNXbGg2NzQ'
 export default resumeUrl
